@@ -1,0 +1,15 @@
+{
+    "name": "prakhar/sparkpost-testing",
+    "description": "test",
+    "authors": [
+        {
+            "name": "Prakhar",
+            "email": "srivprakhar@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "php-http/guzzle6-adapter": "^1.1",
+        "sparkpost/sparkpost": "^2.0"
+    }
+}
