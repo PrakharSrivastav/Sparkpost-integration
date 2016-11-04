@@ -21,12 +21,12 @@ $promise = $sparky->transmissions->post([
         //'text' => 'Congratulations, {{name}}!! You just sent your very first mailing!',
         'template_id' => 'test-template'
     ],
-    'substitution_data' => ['name' => 'Prakhar'],
+    'substitution_data' => ['name' => 'Test'],
     'recipients' => [
         [
             'address' => [
-                'name' => 'Kyrre',
-                'email' => 'ps@kortogkontant.no',
+                'name' => 'Test',
+                'email' => 'test@yopmail.com',
             ],
         ],
     ],
