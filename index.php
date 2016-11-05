@@ -31,7 +31,7 @@ $response = $sparky->transmissions->post(
 
 // Create a recipient list
 // request('POST', 'recipient-lists' ,$payload , $headers);
-// $response = $sparky->request("POST", 'recipient-lists', $config['list']);
+// $response = $sparky->request("POST", 'recipient-lists', $config['new-list']);
 
 // Get all recipient lists
 // request('GET','recipient-lists')
@@ -46,17 +46,35 @@ $response = $sparky->transmissions->post(
 // request('DELETE','recipient-lists/list-id');
 // $response = $sparky->request('DELETE','recipient-lists/test-list-2');
 
-//$response = $sparky->request('PUT', "recipient-lists/unique_id_4_graduate_students_list", );
-//try {
-////    $response = $sparky->transmissions->post();
-//    echo $response->getStatusCode() . "\n";
-//    print_r($response->getBody()) . "\n";
-//}
-//catch (\Exception $e) {
-//    echo $e->getCode() . "\n";
-//    echo $e->getMessage() . "\n";
-//}
+// Create a template
+// Make sure all the email-addresses are pointed to you domain
+// request('POST','templates',$payload)
+// $response = $sparky->request('POST','templates',$config['template-create']);
+// $response = $sparky->request('POST','templates',$config['template-create-new']);
 
+// List all templates
+// request('GET','template')
+// $response = $sparky->request('GET','templates');
+
+// Get a specific template
+// request('GET','templatestemplate-id')
+// $response = $sparky->request('GET','templates/test-template');
+
+// Update Template
+// request('PUT','templates/template-id',$payload);
+// $response = $sparky->request('PUT','templates/summer_sale',$config['template-update']);
+
+// Delete Template
+// request('DELETE','templates/template-id');
+// $response = $sparky->request('DELETE','templates/summer_sale');
+
+// Sending transmission with stored-template and stored-list
+//$response = $sparky->request('POST','transmissions', [
+//    'content'       => ['template_id' => 'test-template',],
+//    'recipients'    => ['list_id' =>'new-list'], 
+//    "campaign_id"   => "christmas_campaign",
+//    "name"          => "Fall Sale",
+//]);
 
 try {
     echo $response->getStatusCode() . "\n";
